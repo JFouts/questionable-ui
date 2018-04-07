@@ -1,0 +1,36 @@
+<h1>Ask a Question</h1>
+
+<mat-card>
+    <mat-form-field>
+        <input matInput placeholder="Title" (input)="title = $event.target.value">
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea matInput 
+            placeholder="Question" 
+            (input)="question = $event.target.value"  
+            matTextareaAutosize 
+            matAutosizeMinRows="5"
+            matAutosizeMaxRows="15"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-chip-list selectable="false" #subjectTagChipList>
+            <mat-chip *ngFor="let tag of subjectTags" 
+                removable="true" 
+                (remove)="removeSubjectTag(tag)">
+                {{tag}}
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="Subject Tags"
+                [matChipInputFor]="subjectTagChipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                matChipInputAddOnBlur="true"
+                (matChipInputTokenEnd)="addSubjectTag($event)" />
+        </mat-chip-list>
+    </mat-form-field>
+
+    <button mat-fab color="primary" (click)="onAskQuestion()">
+        <mat-icon>add</mat-icon>
+    </button>
+</mat-card>

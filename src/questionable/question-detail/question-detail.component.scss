@@ -1,0 +1,25 @@
+.card-box {
+    margin-bottom: 4px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+mat-card {
+    margin-bottom: 10px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.accepted-answer-container {
+    display: flex;
+    align-items: center;
+}
+
+.accepted-answer-text {
+    font-variant-caps: petite-caps;
+}

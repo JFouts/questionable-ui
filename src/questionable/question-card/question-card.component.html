@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{question.user.fullname}}</mat-card-title>
+        <mat-card-subtitle>{{question.user.title}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <h2>
+            {{question.title}}
+        </h2>
+    </mat-card-content>
+    <mat-card-content>
+        {{question.description}}
+    </mat-card-content>
+    <mat-chip-list>
+        <mat-chip *ngFor="let tag of question.subjectTags">{{tag}}</mat-chip>
+    </mat-chip-list>
+    <mat-card-actions>
+        <button (click)="onLike()" mat-button matTooltip="Like" matTooltipPosition="below">
+            <i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> {{question.likes}}
+        </button>
+        <button mat-button [routerLink]="['/question', question.questionId]"><i class="fa fa-reply fa-lg" aria-hidden="true"></i> Answers {{question.numberOfAnswers}}</button>
+    </mat-card-actions>
+</mat-card>

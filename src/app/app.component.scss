@@ -1,0 +1,45 @@
+ul {
+  text-orientation: sideways;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline;
+  border-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-element {
+  float: right;
+  margin-top: 2px;
+  margin-right: 12px;
+  padding-right:2px;
+  margin-left:4px;
+  font-variant-caps: petite-caps;
+  font-weight: bold;
+  color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  top: 10px;
+  z-index: 500;
+  height: 50px;
+  perspective: 2000px;
+}
+
+.nav-logo {
+  font-style: oblique;
+  font-variant-caps: petite-caps;
+  font-weight: bold;
+  font-size: 1.2em;
+}

@@ -1,0 +1,9 @@
+<h1>Most Popular Questions</h1>
+
+<div *ngIf="popularQuestions">
+    <div *ngFor="let question of popularQuestions.results">
+        <div class="card-box">
+            <question-card [question]="question"></question-card>
+        </div>
+    </div>
+</div>
